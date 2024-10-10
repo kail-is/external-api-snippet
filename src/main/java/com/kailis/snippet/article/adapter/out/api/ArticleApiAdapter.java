@@ -4,11 +4,12 @@ import com.kailis.snippet.article.application.port.out.CommandArticlePort;
 import com.kailis.snippet.article.application.port.out.LoadArticlePort;
 import com.kailis.snippet.article.domain.Article;
 import com.kailis.snippet.common.exception.ResourceNotFoundException;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
+@Profile("prod")
 @Component
 public class ArticleApiAdapter implements LoadArticlePort, CommandArticlePort {
 
